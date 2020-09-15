@@ -18,8 +18,9 @@ d.getTicketPrice();
 	q.addMovie(b);
 	q.addMovie(c);
 	q.addMovie(d);
-	System.out.println(q);
-	
+q.getBestMovie();
+q.printMovies();
+
 	}
 }
 
