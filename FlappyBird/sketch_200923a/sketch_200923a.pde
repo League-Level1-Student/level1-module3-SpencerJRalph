@@ -10,7 +10,10 @@ int pipeGap = 100;
 int upperPipeHeight = 250;
 int lowerPipeHeight = 800 - upperPipeHeight - pipeGap;
 boolean endgame = false;
+boolean gameend = false;
 void draw() {
+ 
+
   background(0, 0, 252);
 fill(252, 252, 13);
 stroke(0, 0, 0);
@@ -20,6 +23,9 @@ fill(0, 252, 30);
 rect(pipeX, 0, 75, upperPipeHeight);
 fill(0,252,30);
 rect(pipeX, upperPipeHeight + pipeGap, 75, lowerPipeHeight);
+   fill(201,165,118);
+
+  rect(0,700,300,100);
 y++;
 y=y+gravity;
 pipeX--;
