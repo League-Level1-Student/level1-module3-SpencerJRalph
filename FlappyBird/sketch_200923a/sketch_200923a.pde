@@ -31,10 +31,14 @@ y=y+gravity;
 pipeX--;
 teleportPipes();
 endgame = intersectsPipes();
+  gameend = hitsGround();
 if(endgame == true) {
-noLoop();
+  noLoop();}
+  if(gameend == true){
+    noLoop();
+  }
 }
-}
+
 boolean intersectsPipes() { 
          if (y < upperPipeHeight && x > pipeX && y < (pipeX+pipeGap)){
            print("collision");
@@ -43,6 +47,12 @@ boolean intersectsPipes() {
           print("collision");
            return true; }
         else { return false; }
+}
+boolean hitsGround() {
+  if ( y > 700){
+    print("collision");
+    return true; }
+    else {return false;}
 }
 void mousePressed() {
   y=y-birdYVelocity;
