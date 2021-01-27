@@ -27,10 +27,18 @@ void draw()
   else if(y<0) {
     y = 0;
   }
+  hi.moveLeft();
   hi.display();
+   bye.moveRight();
   bye.display();
+    m.moveRight();
   m.display();
+      t.moveLeft();
   t.display();
+
+
+  
+  
 }
 
 void keyPressed()
@@ -64,6 +72,20 @@ public class car{
    this.carY = b;
    this.carSize = c;
    this.carSpeed = d;
+   
+  
+  }
+  public void moveLeft() {
+    carX--;
+    if(carX<0) {
+      carX = 600;
+    }
+  }
+   public void moveRight() {
+    carX++;
+    if(carX>0) {
+      carX = 0;
+    }
   }
   void display()
   {
