@@ -66,7 +66,23 @@ public class car{
   int carY;
   int carSize;
   int carSpeed;
-  
+  boolean intersects(car car) {
+ if ((y > car.getY() && y < car.getY()+50) &&
+                (x > car.getX() && x < car.getX()+car.getSize())) {
+   return true;
+  }
+ else  {
+  return false;}
+ }
+  int getX(){
+    return carX;
+  }
+ int  getY(){
+    return carY;
+  }
+  int getSize() {
+    return carSize;
+  }
   public car(int a, int b, int c, int d) {
    this.carX = a;
    this.carY = b;
@@ -83,7 +99,7 @@ public class car{
   }
    public void moveRight() {
     carX++;
-    if(carX>0) {
+    if(carX>width) {
       carX = 0;
     }
   }
